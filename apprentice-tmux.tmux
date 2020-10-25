@@ -26,7 +26,8 @@ setw() {
 set "message-style" "fg=$white,bg=$black"
 
 set "status" "on"
-set "status-justify" "left"
+set "status-justify" "center"
+set "status-bg" "black"
 
 set "status-left-length" "100"
 set "status-right-length" "100"
@@ -50,10 +51,12 @@ set "@prefix_highlight_bg" "$green"
 set "@prefix_highlight_copy_mode_attr" "fg=$black,bg=$green"
 set "@prefix_highlight_output_prefix" "  "
 
-time_format="%R"
-date_format="%d/%m/%Y"
+# set "status-right" "#[fg=colour236,bg=colour234]#[fg=brightcyan,bg=colour236] #(~/bin/tmux-spotify-info)"
+# set "status-right" "#[fg=$white,bg=$black,nounderscore,noitalics]${time_format}  ${date_format} #[fg=$green,bg=$black,nobold,nounderscore,noitalics]#[fg=$black,bg=$green,bold] #h #[fg=$orange, bg=$green]#[fg=$red,bg=$orange]"
+# set -g status-right " #{cpu_fg_color} CPU : #{cpu_percentage} #{ram_fg_color} ram : #{ram_percentage}"
+# set "status-right" '#{cpu_bg_color} CPU: #{cpu_icon} #{cpu_percentage} | %a %h-%d %H:%M '
+set "status-right" ''
 
-set "status-right" "#[fg=$white,bg=$black,nounderscore,noitalics]${time_format}  ${date_format} #[fg=$green,bg=$black,nobold,nounderscore,noitalics]#[fg=$black,bg=$green,bold] #h #[fg=$orange, bg=$green]#[fg=$red,bg=$orange]"
 set "status-left" "#[fg=$black,bg=$green,bold] #S #{prefix_highlight}#[fg=$green,bg=$black,nobold,nounderscore,noitalics]"
 
 set "window-status-format" "#[fg=$black,bg=$black,nobold,nounderscore,noitalics]#[fg=$white,bg=$black] #I  #W #[fg=$black,bg=$black,nobold,nounderscore,noitalics]"
